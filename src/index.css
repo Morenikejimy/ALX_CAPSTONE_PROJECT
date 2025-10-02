@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@layer utilities {
+  .bold-20{
+    @apply text-[20px] font-[700];
+  }
+  .bold-16{
+    @apply text-[16px] font-[700];
+  }
+}
