@@ -1,5 +1,5 @@
-import { Toaster, toast } from "react-hot-toast";
 import { Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import BookList from "./pages/BookList";
 import Categories from "./pages/Categories";
@@ -15,16 +15,14 @@ import UserInfo from "./components/UserInfo";
 
 function App() {
   return (
-    <Toaster>
       <Routes>
-         <Route path="/" element={<Home />} />
+         <Route path="/" element={<Home />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/categories/:ageGroupId" element={<BookList />} />
-          <Route path="/search" element={<Search />} />
       </Routes>
-    </Toaster>
+      
   );
 }
 
