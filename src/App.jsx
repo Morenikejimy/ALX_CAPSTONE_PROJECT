@@ -1,12 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import logo from "./logo.png";
-import Home from "./pages/ Home";
+import logo from "./assets/logo.png";
+import agegroup from "./assets/agegroup.png";
+import searchIcon from "./assets/searchicon.png";
+import Home from "./pages/Home";
 import BookList from "./pages/BookList";
-import Categories from "./pages/Categories";
-import Login from "./pages/Login";
-import  Profile from "./pages/Profile";
 import ReadBook from "./pages/ReadBook";
-import AgeGroupCard from "./components/AgeGroupCard";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
@@ -17,10 +15,8 @@ function App() {
   return (
       <Routes>
          <Route path="/" element={<Home />}/>
-          <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/categories" element={<Categories />} />
-          <Route path="/categories/:ageGroupId" element={<BookList />} />
+          <Route path="/books/:categoryId" element={<BookList />} />
+          <Route path="/Home/:ageGroupId" element={<BookList />} />
       </Routes>
       
   );

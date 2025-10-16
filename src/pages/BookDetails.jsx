@@ -3,16 +3,16 @@ import { useParams } from "react-router-dom";
 import { getBooksByCategory } from "../api/bookApi";
 import Navbar from "../components/Navbar";
 
-function BookList() {
-  const { categoryId } = useParams(); // 👈 Grab the category ID from URL
-  const [books, setBooks] = useState([]);
+function BookDetails() {
+  const {categoryId , bookId} = useParams(); // 👈 Grab the category and Book ID from URL
+  const [bookDetails, setBookDetails] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    getBooksByCategory(categoryId)
+    getBookDetails(categoryId, bookId)
       .then((data) => {
-        setBooks(data);
+        setBookDetails(data);
         setLoading(false);
       })
       .catch((err) => {
@@ -20,12 +20,12 @@ function BookList() {
         setError("Failed to load books");
         setLoading(false);
       });
-  }, [categoryId]);
+  }, [categoryId, bookId]);
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <div className="p-6">
+      {/* <div className="p-6">
         <h1 className="text-2xl font-bold text-center mb-6">
           Books in Category {categoryId}
         </h1>
@@ -51,4 +51,4 @@ function BookList() {
   );
 }
 
-export default BookList;
+export default BookList; */}
