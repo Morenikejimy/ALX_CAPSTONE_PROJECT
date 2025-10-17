@@ -7,6 +7,7 @@ import BookList from "./pages/BookList";
 import ReadBook from "./pages/ReadBook";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/SearchBar";
 import UserInfo from "./components/UserInfo";
@@ -17,6 +18,7 @@ function App() {
          <Route path="/" element={<Home />}/>
           <Route path="/books/:categoryId" element={<BookList />} />
           <Route path="/Home/:ageGroupId" element={<BookList />} />
+           <Route path="/book-details/:categoryId/:bookId" element={<BookDetails />} />
       </Routes>
       
   );

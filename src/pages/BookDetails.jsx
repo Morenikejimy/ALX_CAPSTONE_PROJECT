@@ -21,11 +21,12 @@ function BookDetails() {
         setLoading(false);
       });
   }, [categoryId, bookId]);
+  console.log(bookDetails);
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      {/* <div className="p-6">
+      <div className="p-6">
         <h1 className="text-2xl font-bold text-center mb-6">
           Books in Category {categoryId}
         </h1>
@@ -34,7 +35,7 @@ function BookDetails() {
         {error && <p className="text-center text-red-500">{error}</p>}
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {books.map((book) => (
+          {/* {books.map((book) => (
             <div key={book.id} className="border rounded-lg p-4 shadow bg-white">
               <img
                 src={book.coverImage}
@@ -43,12 +44,12 @@ function BookDetails() {
               />
               <h3 className="text-lg font-semibold mt-2">{book.title}</h3>
               <p className="text-sm text-gray-500">{book.author}</p>
-            </div>
-          ))}
+            </div> */}
+          {/* ))} */}
         </div>
       </div>
     </div>
   );
 }
 
-export default BookList; */}
+export default BookDetails;

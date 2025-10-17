@@ -35,7 +35,8 @@ function BookList() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {books.map((book) => (
-            <div key={book.id} className="border rounded-lg p-4 shadow bg-white">
+            <link to={`/book-details/${categoryId}/${book.id}`} key={book.id} className="border rounded-lg p-4 shadow bg-white">
+            key={book.id} className="border rounded-lg p-4 shadow bg-white" 
               <img
                 src={book.coverImage}
                 alt={book.title}
@@ -43,7 +44,7 @@ function BookList() {
               />
               <h3 className="text-lg font-semibold mt-2">{book.title}</h3>
               <p className="text-sm text-gray-500">{book.author}</p>
-            </div>
+            </link>
           ))}
         </div>
       </div>
