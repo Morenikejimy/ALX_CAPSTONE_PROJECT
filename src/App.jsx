@@ -18,7 +18,7 @@ function App() {
          <Route path="/" element={<Home />}/>
           <Route path="/books/:categoryId" element={<BookList />} />
           <Route path="/Home/:ageGroupId" element={<BookList />} />
-           <Route path="/book-details/:categoryId/:bookId" element={<BookDetails />} />
+           <Route path="/book-details/:categoryId/:bookId" element={<BookDetails gi/>} />
       </Routes>
       
   );
