@@ -11,7 +11,9 @@ function App() {
          <Route path="/" element={<Home />}/>
           <Route path="/books/:categoryId" element={<BookList />} />
           <Route path="/Home/:ageGroupId" element={<BookList />} />
-           <Route path="/book-details/:categoryId/:bookId" element={<BookDetails gi/>} />
+           <Route path="/book-details/:categoryId/:bookId" element={<BookDetails/>} />
+           <Route path="/read-book/:categoryId/:bookId/:chapterNumber" element={<ReadBook />} />
+           <Route path="/search" element={<SearchResults />} />
       </Routes>
       
   );

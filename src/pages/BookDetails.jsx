@@ -52,8 +52,8 @@ function BookDetails() {
 
       <div className="p-6 max-w-6xl mx-auto">
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-          {/* Book Header */}
-          <div className="bg-blue-600 p-8">
+        {/* Book Header */}
+           <div className="bg-blue-600 p-8">
             <h1 className="text-4xl font-bold text-white text-center mb-2">
               {bookDetails.title}
             </h1>
