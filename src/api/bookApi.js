@@ -1,4 +1,4 @@
-const BASE_URL = "https://book-api.fly.dev";
+const BASE_URL = "https://bookie-api-8zbz.onrender.com/";
 
 // Fetch all categories
 export const getAllCategories = async () => {
